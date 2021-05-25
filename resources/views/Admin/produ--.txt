@@ -1,0 +1,19 @@
+                    @php
+                        if($title){
+                            foreach($pdtid as $pid){
+
+                            $i = array_search($pid, $pdtid);
+
+                                echo "<div class='single-cart-item'>
+                                        <div class='pdt-image'>
+                                      <img src='".url('/')."/images/product/{$picture[$i]}'/>
+                                      </div>
+                                       <div class='pdt-text'><h4>{$title[$i]}</h4></div>
+                                       <span id='qty-{$pdtid[$i]}' class='qntity'>{$quantity[$i]}</span> X
+                                       <span class='qntity'>{$sprice[$i]}</span>
+                                       <i id='item-close{$pdtid[$i]}' class='glyphicon glyphicon-remove pull-right close-btn'></i>
+                                        </div>";
+
+                            }
+                        }
+                    @endphp
